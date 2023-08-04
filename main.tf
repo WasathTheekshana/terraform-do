@@ -1,16 +1,7 @@
 terraform {
-  cloud {
-    organization = "wasath-personal"
-
-    workspaces {
-      name = "digitalocean-infra"
-    }
-  }
-}
-terraform {
   backend "remote" {
+    hostname = "app.terraform.io"
     organization = "wasath-personal"
-
     workspaces {
       name = "digitalocean-infra"
     }
